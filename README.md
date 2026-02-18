@@ -1,19 +1,40 @@
-# Traffic Accident Predictor
+# Traffic Accident Severity Prediction (CA / NY / FL)
 
-[![Python](https://img.shields.io/badge/python-3.10-blue)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green)]
+## Why this matters (Business Value)
+This project helps transportation agencies and city planners prioritize high-impact safety interventions by identifying the conditions and roadway features most associated with severe crashes across three states. The results support targeted actions (e.g., improving lighting/signage at intersections and strengthening signal enforcement) to reduce severe outcomes and guide infrastructure investment.
 
-Predict accident severity in CA, NY, FL using Logistic Regression, Random Forest & XGBoost.
+## Overview
+I built an end-to-end machine learning pipeline to predict accident severity using **Logistic Regression**, **Random Forest**, and **XGBoost**. The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, and model evaluation.
 
-**Tech**: Python · pandas · scikit-learn · geopandas · Jupyter
+## Key Results
+- **Best model:** XGBoost  
+- **Accuracy (held-out test):** **~71% (CA)**, **~63% (NY)**, **~72% (FL)**
+- **Most influential factors:** visibility conditions and roadway infrastructure (e.g., intersections/crossings) were stronger predictors than adverse weather
 
-## Quick start
-```bash
-git clone git@github.com:JacobREdwards/traffic-accident-predictor.git
-cd traffic-accident-predictor
-pip install -r requirements.txt
-jupyter notebook
+## Actionable Recommendations
+Based on the analysis, the most practical interventions include:
+- Improve **lighting** and **signage** in poor-visibility areas
+- Prioritize safety upgrades at **intersections/crossings**
+- Strengthen **traffic signal enforcement** and compliance measures
 
-![demo](./assets/traffic.gif)
+## Methods (High Level)
+- Data cleaning + encoding
+- Feature engineering: time-of-day, infrastructure indicators, visibility-related conditions
+- Model comparison: Logistic Regression vs Random Forest vs XGBoost
+- Model evaluation: accuracy and error analysis (plus any additional metrics you include)
+
+## Repo Structure
+├── notebooks/ # EDA + modeling notebooks (clean, numbered)
+├── src/ # reusable code (prep, features, train, eval)
+├── reports/ # final report PDF and figures
+├── figures/ # charts used in README/report
+├── requirements.txt # or environment.yml
+└── README.md
+
+
+## How to Run
+1. Create environment:
+   ```bash
+   pip install -r requirements.txt
 
 
