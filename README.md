@@ -11,17 +11,6 @@ I built an end-to-end machine learning pipeline to predict accident severity usi
 - **Accuracy (held-out test):** **~71% (CA)**, **~63% (NY)**, **~72% (FL)**
 - **Most influential factors:** visibility conditions and roadway infrastructure (e.g., intersections/crossings) were stronger predictors than adverse weather
 
-- ## Model Diagnostics (Example: Florida)
-
-**Confusion Matrix (XGBoost, FL):** shows where the model confuses adjacent severity classes.
-![Confusion Matrix - Florida](figures/confusion_matrix_florida.png)
-
-**Feature Importance (XGBoost, FL):** infrastructure + visibility-related features rank highly.
-![Feature Importance - Florida](figures/feature_importance_florida.png)
-
-**Actual vs Predicted Severity Distribution (FL):** sanity check that predictions roughly match class proportions.
-![Actual vs Predicted - Florida](figures/actual_vs_pred_florida.png)
-
 ## Actionable Recommendations
 Based on the analysis, the most practical interventions include:
 - Improve **lighting** and **signage** in poor-visibility areas
