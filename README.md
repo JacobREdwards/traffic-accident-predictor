@@ -1,40 +1,62 @@
-# Traffic Accident Severity Prediction (CA / NY / FL)
+# Traffic Accident Severity Prediction
 
-## Why this matters (Business Value)
-This project helps transportation agencies and city planners prioritize high-impact safety interventions by identifying the conditions and roadway features most associated with severe crashes across three states. The results support targeted actions (e.g., improving lighting/signage at intersections and strengthening signal enforcement) to reduce severe outcomes and guide infrastructure investment.
+Machine learning project for predicting crash severity across California, New York, and Florida using structured accident data, feature engineering, and model comparison.
 
-## Overview
-I built an end-to-end machine learning pipeline to predict accident severity using **Logistic Regression**, **Random Forest**, and **XGBoost**. The workflow includes data cleaning, exploratory data analysis (EDA), feature engineering, and model evaluation.
+## Why This Matters
+Severe traffic accidents are influenced by more than just bad weather. This project identifies the roadway, visibility, and infrastructure conditions most associated with severe crashes so that transportation agencies and planners can prioritize the highest-impact safety improvements.
 
-## Key Results
-- **Best model:** XGBoost  
-- **Accuracy (held-out test):** **~71% (CA)**, **~63% (NY)**, **~72% (FL)**
-- **Most influential factors:** visibility conditions and roadway infrastructure (e.g., intersections/crossings) were stronger predictors than adverse weather
+## Project Overview
+I built an end-to-end machine learning workflow to predict accident severity using:
 
-## Actionable Recommendations
-Based on the analysis, the most practical interventions include:
-- Improve **lighting** and **signage** in poor-visibility areas
-- Prioritize safety upgrades at **intersections/crossings**
-- Strengthen **traffic signal enforcement** and compliance measures
+- Logistic Regression
+- Random Forest
+- XGBoost
 
-## Methods (High Level)
-- Data cleaning + encoding
-- Feature engineering: time-of-day, infrastructure indicators, visibility-related conditions
-- Model comparison: Logistic Regression vs Random Forest vs XGBoost
-- Model evaluation: accuracy and error analysis (plus any additional metrics you include)
+The project includes data cleaning, exploratory data analysis, feature engineering, model training, and evaluation across multiple state-level datasets.
 
-## Repo Structure
-├── notebooks/ # EDA + modeling notebooks (clean, numbered)
-├── src/ # reusable code (prep, features, train, eval)
-├── reports/ # final report PDF and figures
-├── figures/ # charts used in README/report
-├── requirements.txt # or environment.yml
+## Results
+- **Best model:** XGBoost
+- **Held-out test accuracy:**
+  - California: **~71%**
+  - New York: **~63%**
+  - Florida: **~72%**
+- **Key predictors:** visibility-related conditions and roadway infrastructure features such as intersections and crossings were stronger predictors than adverse weather alone
+
+## Practical Takeaways
+The analysis suggests several high-value interventions:
+
+- Improve lighting and signage in poor-visibility areas
+- Prioritize upgrades at intersections and crossings
+- Strengthen traffic signal enforcement and compliance measures
+
+## Methods
+### Data Preparation
+- Cleaned and encoded structured accident data
+- Standardized features across states where possible
+- Prepared data for classification modeling
+
+### Feature Engineering
+- Time-of-day indicators
+- Infrastructure-related features
+- Visibility and roadway-condition variables
+
+### Modeling
+- Logistic Regression for baseline interpretability
+- Random Forest for nonlinear ensemble comparison
+- XGBoost for boosted-tree performance
+
+### Evaluation
+- Compared models on held-out test data
+- Reviewed model accuracy and general error patterns
+- Interpreted which features most influenced severity prediction
+
+## Repository Structure
+```text
+traffic-accident-predictor/
+├── data/              # project datasets or references to data sources
+├── figures/           # charts and visuals used in the project
+├── src/               # reusable project code
+├── requirements.txt   # Python dependencies
 └── README.md
-
-
-## How to Run
-1. Create environment:
-   ```bash
-   pip install -r requirements.txt
 
 
