@@ -15,6 +15,7 @@ I built an end-to-end machine learning workflow to predict accident severity usi
 The project includes data cleaning, exploratory data analysis, feature engineering, model training, and evaluation across multiple state-level datasets.
 
 ## Results
+![XGBoost Held-Out Test Accuracy by State](figures/xgboost-state-accuracy.png)
 - **Best model:** XGBoost
 - **Held-out test accuracy:**
   - California: **~71%**
